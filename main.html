@@ -6,11 +6,9 @@
   </head>
   <body>
     <script type="text/javascript">
-      const blob = new Blob(['あいうえお'],{type:"text/plain"});
-      const link = document.createElement('a');
-      link.href = URL.createObjectURL(blob);
-      link.download = 'ファイル名.txt';
-      link.click();
+      var file = fs.OpenTextFile("text.txt", 2);
+      file.Write("マルペケつくろ～");
+      file.Close();
     </script>
   </body>
 </html>
