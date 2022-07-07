@@ -1,15 +1,17 @@
 <!DOCTYPE html>
-<html lang="ja" dir="ltr">
+<html>
   <head>
-    <meta charset="utf-8">
-    <title>Test for writing to local gile</title>
+    <title>Read Text File Tutorial</title>
   </head>
   <body>
-    <script type="text/javascript">
-      var fs = require('fs');
-      var file = fs.OpenTextFile("mail.txt", 2);
-      file.Write("マルペケつくろ～");
-      file.Close();
+    <input type="file" onchange="loadFile(this.files[0])">
+    <br>
+    <pre id="output"></pre>
+    <script>
+      async function loadFile(file) {
+        let text = await file.text();
+        document.getElementById('output').textContent = text;
+      }
     </script>
   </body>
 </html>
