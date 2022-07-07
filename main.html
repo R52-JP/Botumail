@@ -6,6 +6,7 @@
   </head>
   <body>
     <script type="text/javascript">
+      var fs = require('fs');
       var file = fs.OpenTextFile("mail.txt", 2);
       file.Write("マルペケつくろ～");
       file.Close();
