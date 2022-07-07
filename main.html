@@ -8,10 +8,15 @@
     <br>
     <pre id="output"></pre>
     <script>
-      async function loadFile(file) {
-        let text = await file.text();
-        document.getElementById('output').textContent = text;
-      }
+      var ajax = new XMLHttpRequest();
+      ajax.open("GET",'main.txt');
+      ajax.addEventListener('readystatechange',function(e){
+        var t=e.target;
+        if(( t.readyState == 4 ) && ( t.status == 200 )){
+          console.log(t.responseText);
+        }
+      });
+ajax.send();
     </script>
   </body>
 </html>
