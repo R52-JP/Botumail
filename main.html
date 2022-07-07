@@ -6,17 +6,11 @@
   </head>
   <body>
     <script type="text/javascript">
-      // Scripting.FileSystemObject というオブジェクトを作成（JavaScript内でWSHを使ってファイルを扱う）
-      var fs = new ActiveXObject("Scripting.FileSystemObject");
-
-      // text.txtという新規のファイルを作成
-      var file = fs.CreateTextFile("text.txt");
-
-      // texxt.txtファイルへ書き込み
-      file.Write("Complete, written!");
-
-      // text.txtファイルを閉じる
-      file.Close();
+      const blob = new Blob(['あいうえお'],{type:"text/plain"});
+      const link = document.createElement('a');
+      link.href = URL.createObjectURL(blob);
+      link.download = 'ファイル名.txt';
+      link.click();
     </script>
   </body>
 </html>
