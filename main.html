@@ -1,22 +1,10 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Read Text File Tutorial</title>
+    <title>チャット</title>
   </head>
   <body>
-    <input type="file" onchange="loadFile(this.files[0])">
-    <br>
-    <pre id="output"></pre>
     <script>
-      var ajax = new XMLHttpRequest();
-      ajax.open("GET",'main.txt');
-      ajax.addEventListener('readystatechange',function(e){
-        var t=e.target;
-        if(( t.readyState == 4 ) && ( t.status == 200 )){
-          console.log(t.responseText);
-        }
-      });
-ajax.send();
     </script>
   </body>
 </html>
