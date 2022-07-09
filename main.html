@@ -1,10 +1,16 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title>チャット</title>
-  </head>
-  <body>
-    <script src="st.js">
-    </script>
-  </body>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <title>sample</title>
+</head>
+<body>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+  <script language="javascript" type="text/javascript">
+      url = "text.txt";
+      $.get(url, (data) => {
+        console.log(data);
+      });
+  </script>
+</body>
 </html>
