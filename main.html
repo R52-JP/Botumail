@@ -2,15 +2,52 @@
 <html lang="ja">
 <head>
   <meta charset="utf-8">
-  <title>sample</title>
+  <title>メッセージ</title>
+  <style>
+.message {
+  position: relative;
+  display: inline-block;
+  margin: 1.5em 0;
+  padding: 7px 10px;
+  min-width: 120px;
+  max-width: 100%;
+  color: #555;
+  font-size: 16px;
+  background: #e0edff;
+  border-radius: 15px;
+}
+
+.message:before {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -15px;
+  border: 15px solid transparent;
+  border-top: 15px solid #e0edff;
+}
+
+.message p {
+  margin: 0;
+  padding: 0;
+}
+  </style>
 </head>
 <body>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
   <script language="javascript" type="text/javascript">
-      url = "text.txt";
-      $.get(url, (data) => {
-        console.log(data);
-      });
+    url = "text.txt";
+    text = ""
+    html = ""
+    $.get(url, (data) => {
+      text = data
+    });
+    message_list = text.split("\n\n")
+    for ( let i = 0; i < message_list.length; i++  {
+      add_html = `<div class="message"><p>${message[i]}</p></div>`
+      html = html + add_html
+    }
+    document.write(html)
   </script>
 </body>
 </html>
