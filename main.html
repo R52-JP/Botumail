@@ -42,10 +42,10 @@
     $.get(url, (data) => {
       text = data
     });
-    print(text)
+    console.log(text)
     message_list = text.split("\n\n")
-    print( text.split("\n\n") )
-    print( message_list )
+    console.log( text.split("\n\n") )
+    console.log( message_list )
     for ( let i = 0; i < message_list.length; i++ ) {
       message = message_list[i]
       add_html = `<div class="message"><p>${message_list}</p></div>`
