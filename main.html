@@ -46,8 +46,10 @@
         add_html = `<div class="message"><p>${message}</p></div>`
         html = html + add_html
       }
-      document.write(html)
+      document.getElementById('this').innerHTML = html ;
     });
   </script>
+  <div id="this">
+  </div>
 </body>
 </html>
