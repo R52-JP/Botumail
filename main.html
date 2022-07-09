@@ -33,13 +33,13 @@
       html = ""
       for ( let i = 0; i < message_list.length; i++ ) {
         message = message_list[i]
-        add_html = `<div><p>${message}</p></div>`
+        add_html = `<div class="message"><p>${message}</p></div>`
         html = html + add_html
       }
       document.getElementById('this').innerHTML = html ;
     });
   </script>
-  <div id="this" classs="message">
+  <div id="this">
   </div>
 </body>
 </html>
