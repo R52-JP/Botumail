@@ -37,21 +37,17 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
   <script language="javascript" type="text/javascript">
     url = "text.txt";
-    text = ""
-    html = ""
     $.get(url, (data) => {
-      text = data
+      console.log(data)
+      message_list = data.split("\n\n")
+      html = ""
+      for ( let i = 0; i < message_list.length; i++ ) {
+        message = message_list[i]
+        add_html = `<div class="message"><p>${message}</p></div>`
+        html = html + add_html
+      }
+      document.write(html)
     });
-    console.log(text)
-    message_list = text.split("\n\n")
-    console.log( text.split("\n\n") )
-    console.log( message_list )
-    for ( let i = 0; i < message_list.length; i++ ) {
-      message = message_list[i]
-      add_html = `<div class="message"><p>${message_list}</p></div>`
-      html = html + add_html
-    }
-    document.write(html)
   </script>
 </body>
 </html>
