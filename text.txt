@@ -11,3 +11,5 @@ Which do you want,tea or coffee?(yu-to)
 Good bye
 
 返信
+
+僕が使い方を理解したかテスト
