@@ -15,4 +15,4 @@ Good bye
 僕が使い方を理解したかテスト
 
 I want tea.
-Coffee and P.E. is human's enemy.
+Coffee and P.E. is human's enemy。
