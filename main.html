@@ -72,7 +72,7 @@ a {
         for ( let j = 0; j < message_list[i].length; j++ ) {
           if ( message_list[i][j].includes('http://') || message_list[i][j].includes('https://') ) {
             add_html1 = `<a href="${message_list[i][j]}">${message_list[i][j]}</a>`
-          } else {
+          } else if !( message_list[i][j] == "\n" ) {
             add_html1 = `<p>${message_list[i][j]}</p>`
           }
           add_html2 = add_html2 + add_html1
