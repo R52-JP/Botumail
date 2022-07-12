@@ -42,10 +42,15 @@
   z-index: 1;
 }
 
+h1 {
+  border-bottom: double 5px #FFC778;
+}
+
 p {
   line-height: 0.5;
   font-family: "Hiragino Maru Gothic ProN W4"
 }
+
 a {
   line-height: 0.5;
   font-family: "Hiragino Maru Gothic ProN W4"
@@ -74,13 +79,19 @@ a {
           console.log(`add_html1:${add_html1}`)
           console.log(`add_html2:${add_html2}`)
         }
-        add_html = `<div class="fukidashi">${add_html2}</div><p></p>`
+        if ( i == message_list.length - 1 ) {
+          add_html = `<div class="fukidashi" id="last">${add_html2}</div><p></p>`
+        } else {
+          add_html = `<div class="fukidashi">${add_html2}</div><p></p>`
+        }
         html = html + add_html
         add_html2 = ""
       }
       document.getElementById('this').innerHTML = html ;
     });
   </script>
+  <h1>メッセージ | Message</h1>
+  <a href="#last"></a>
   <div id="this">
   </div>
 </body>
