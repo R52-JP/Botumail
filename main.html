@@ -57,9 +57,11 @@
         for ( let j = 0; j < message_list[i].length; j++ ) {
           add_html1 = `<p>${message_list[i][j]}</p>`
           add_html2 = add_html2 + add_html1
+          console.log(`add_html1:${add_html1}`)
+          console.log(`add_html2:${add_html2}`)
         }
-        add_html2 = `<div class="message">${add_html2}</div>`
-        html = html + add_html2
+        add_html = `<div class="message">${add_html2}</div>`
+        html = html + add_html
       }
       document.getElementById('this').innerHTML = html ;
     });
