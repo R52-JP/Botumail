@@ -50,11 +50,17 @@
     $.get(url, (data) => {
       console.log(data)
       message_list = data.split("\n\n")
+      add_html_2 = ""
       html = ""
       for ( let i = 0; i < message_list.length; i++ ) {
         message = message_list[i]
-        add_html = `<div><p class="message">${message}</p></div>`
-        html = html + add_html
+        message_list[i] = message_list[i].split("画像")
+        message_list[i] = message_list[i].split("\n")
+        for ( let j = 0; j < message_list[i].length; j++ ) {
+          add_html1 = `<p>${message[i][j]}</p>`
+          add_html2 = add_html2 + add_html1
+        }
+        html = html + add_html2
       }
       document.getElementById('this').innerHTML = html ;
     });
