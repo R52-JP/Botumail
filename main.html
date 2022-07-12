@@ -50,6 +50,7 @@
     $.get(url, (data) => {
       console.log(data)
       message_list = data.split("\n\n")
+      add_html1 = ""
       add_html2 = ""
       html = ""
       for ( let i = 0; i < message_list.length; i++ ) {
@@ -62,6 +63,7 @@
         }
         add_html = `<div class="message">${add_html2}</div>`
         html = html + add_html
+        add_html1 = ""
       }
       document.getElementById('this').innerHTML = html ;
     });
