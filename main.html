@@ -42,8 +42,8 @@
   z-index: 1;
 }
 
-.text {
-  line-height: 1.5;
+p {
+  line-height: 0.5;
 }
   </style>
 </head>
@@ -60,7 +60,7 @@
       for ( let i = 0; i < message_list.length; i++ ) {
         message_list[i] = message_list[i].split("\n")
         for ( let j = 0; j < message_list[i].length; j++ ) {
-          add_html1 = `<p class="text">${message_list[i][j]}</p>`
+          add_html1 = `<p>${message_list[i][j]}</p>`
           add_html2 = add_html2 + add_html1
           console.log(`add_html1:${add_html1}`)
           console.log(`add_html2:${add_html2}`)
