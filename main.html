@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <title>メッセージ</title>
   <style>
-.message {
+.fukidashi {
   position: relative;
   display: inline-block;
   margin: 1.5em 0 1.5em 15px;
@@ -20,7 +20,7 @@
   padding: 10px;
 }
 
-.message:before {
+.fukidashi:before {
   content: "";
   position: absolute;
   top: 50%;
@@ -31,7 +31,7 @@
   z-index: 2;
 }
 
-.message:after {
+.fukidashi:after {
   content: "";
   position: absolute;
   top: 50%;
@@ -40,6 +40,10 @@
   border: 14px solid transparent;
   border-right: 14px solid #555;
   z-index: 1;
+}
+
+.text {
+  line-height: 1.5;
 }
   </style>
 </head>
@@ -56,12 +60,12 @@
       for ( let i = 0; i < message_list.length; i++ ) {
         message_list[i] = message_list[i].split("\n")
         for ( let j = 0; j < message_list[i].length; j++ ) {
-          add_html1 = `<p>${message_list[i][j]}</p>`
+          add_html1 = `<p class="text">${message_list[i][j]}</p>`
           add_html2 = add_html2 + add_html1
           console.log(`add_html1:${add_html1}`)
           console.log(`add_html2:${add_html2}`)
         }
-        add_html = `<div class="message">${add_html2}</div><p></p>`
+        add_html = `<div class="fukidashi">${add_html2}</div><p></p>`
         html = html + add_html
         add_html2 = ""
       }
