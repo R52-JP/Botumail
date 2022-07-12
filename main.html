@@ -80,7 +80,7 @@ a {
           console.log(`add_html2:${add_html2}`)
         }
         if ( i == message_list.length - 1 ) {
-          add_html = `<div class="fukidashi" id="last">${add_html2}</div><p></p>`
+          add_html = `<div class="fukidashi" name="last">${add_html2}</div><p></p>`
         } else {
           add_html = `<div class="fukidashi">${add_html2}</div><p></p>`
         }
@@ -91,7 +91,7 @@ a {
     });
   </script>
   <h1>メッセージ | Message</h1>
-  <a href="#last"></a>
+  <a href="#last">最後</a>
   <div id="this">
   </div>
 </body>
