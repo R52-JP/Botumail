@@ -54,12 +54,12 @@
       html = ""
       for ( let i = 0; i < message_list.length; i++ ) {
         message = message_list[i]
-        message_list[i] = message_list[i].split("画像")
         message_list[i] = message_list[i].split("\n")
         for ( let j = 0; j < message_list[i].length; j++ ) {
           add_html1 = `<p>${message[i][j]}</p>`
           add_html2 = add_html2 + add_html1
         }
+        add_html2 = `<div class="message">${add_html2}</div>`
         html = html + add_html2
       }
       document.getElementById('this').innerHTML = html ;
