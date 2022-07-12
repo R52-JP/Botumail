@@ -60,7 +60,11 @@ p {
       for ( let i = 0; i < message_list.length; i++ ) {
         message_list[i] = message_list[i].split("\n")
         for ( let j = 0; j < message_list[i].length; j++ ) {
-          add_html1 = `<p>${message_list[i][j]}</p>`
+          if ( message_list[i][j].includes('http://') || message_list[i][j].includes('https://') ) {
+            add_html1 = `<a href="${message_list[i][j]}">${message_list[i][j]}</a>`
+          } else {
+            add_html1 = `<p>${message_list[i][j]}</p>`
+          }
           add_html2 = add_html2 + add_html1
           console.log(`add_html1:${add_html1}`)
           console.log(`add_html2:${add_html2}`)
