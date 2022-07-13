@@ -61,4 +61,5 @@ https://ja.wikipedia.org/wiki/%E6%97%A5%E6%9C%AC
 
 オッケーです　　　　上坪
 
-画像のURL⇨https://r52-jp.github.io/Mail/Pictures/(画像名)
+画像のURL⇨
+https://r52-jp.github.io/Mail/Pictures/(画像名)
