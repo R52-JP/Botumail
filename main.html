@@ -76,9 +76,9 @@ a {
         message_list[i] = message_list[i].split("\n")
         for ( let j = 0; j < message_list[i].length; j++ ) {
           if ( message_list[i][j].includes('http://') || message_list[i][j].includes('https://') ) {
-            add_html1 = `<a href="${message_list[i][j]}">${message_list[i][j]}</a>`
+            add_html1 = `<a href="${message_list[i][j]}" target="_blank" rel="noopener noreferrer">${message_list[i][j]}</a>`
           } else if ( message_list[i][j].includes('.png') || message_list[i][j].includes('jpeg') || message_list[i][j].includes('jpg') ) {
-            add_html1 = `<a href="https://r52-jp.github.io/Mail/Pictures/${message_list[i][j]}">${message_list[i][j]}</a>`
+            add_html1 = `<a href="https://r52-jp.github.io/Mail/Pictures/${message_list[i][j]}" target="_blank" rel="noopener noreferrer">${message_list[i][j]}</a>`
           } else {
             add_html1 = `<p>${message_list[i][j]}</p>`
           }
